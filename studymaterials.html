@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Study Materials</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            color: #fff;
+        }
+        header { 
+            background-color: transparent;
+            text-align: center; 
+            padding: 0.5rem 0; 
+            font-size: 1.5rem;
+        }
+        .logo {
+            width: 280px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+        .container { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .branch-card, .material-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .branch-card:hover, .material-card:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: rgba(255, 255, 255, 0.4);
+            color: #1E3C72;
+        }
+        .branch-card a, .material-card a {
+            text-decoration: none;
+            color: #FFF;
+            font-weight: bold;
+        }
+        .branch-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 25px;
+            z-index: -1;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 5px 0 10px 0;
+        }
+        .search-bar input {
+            width: 60%;
+            padding: 12px;
+            border: 2px solid #1E3C72;
+            border-radius: 30px;
+            outline: none;
+            background: #fff;
+            color: #2A5298;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="study.jpeg" alt="TEC Logo" class="logo">
+        <h1>📚 TEC Study Materials 📚</h1>
+        <p>Pick your branch to explore resources</p>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchMaterials()" placeholder="🔍 Search for materials...">
+    </div>
+
+    <div class="container" id="materials">
+        <div class="branch-card"><a href="pdfs/CSE/cse.html">💻 Computer Science (CSE)</a></div>
+        <div class="branch-card"><a href="pdfs/ECE/ece.html">📡 Electronics & Communication (ECE)</a></div>
+        <div class="branch-card"><a href="pdfs/AIML/Aiml.html">🤖 Artificial Intelligence & Machine Learning (AIML)</a></div>
+        <div class="branch-card"><a href="pdfs/IT/IT.html">🌐 Information Technology (IT)</a></div>
+        <div class="branch-card"><a href="pdfs/EEE/EEE.html">⚡ Electrical Engineering (EEE)</a></div>
+    </div>
+
+    <script>
+        function searchMaterials() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.container div');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
