@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Training and Placements | TEC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f4f4f9, #e0e0e0);
+      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.7rem;
+      margin: 0;
+      color: #0077b6;
+    }
+
+    .quote-box {
+      max-width: 850px;
+      margin: 1.5rem auto;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      border-left: 5px solid #0077b6;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      font-size: 1.3rem;
+      font-style: italic;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .quote-box strong {
+      display: block;
+      margin-top: 0.8rem;
+      font-size: 1.1rem;
+      font-style: normal;
+      color: #023e8a;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      text-align: center;
+      margin-top: 2.5rem;
+      color: #0077b6;
+    }
+
+    .resources {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffffd9;
+      padding: 1.5rem 1rem;
+      width: 240px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(5px);
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 0 25px #0077b633;
+    }
+
+    .card a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .card a:hover {
+      background: linear-gradient(90deg, #023e8a, #0077b6);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📈 Training & Placements</h1>
+    <p>Shape your career with guidance and resources from TEC</p>
+  </header>
+
+  <div class="quote-box">
+    “3 L’s: Learn Attitude, Learn Skills, and Learn to Respect Parents.”
+    <strong>– TPO Sir</strong>
+  </div>
+
+  <div class="section-title">🧠 Best Aptitude Platforms</div>
+  <div class="resources">
+    <div class="card"><a href="https://www.indiabix.com" target="_blank">IndiaBix</a></div>
+    <div class="card"><a href="https://prepinsta.com" target="_blank">PrepInsta</a></div>
+    <div class="card"><a href="https://www.freshersworld.com" target="_blank">FreshersWorld</a></div>
+  </div>
+
+  <div class="section-title">💻 Best Coding Platforms</div>
+  <div class="resources">
+    <div class="card"><a href="https://leetcode.com" target="_blank">LeetCode</a></div>
+    <div class="card"><a href="https://www.hackerrank.com" target="_blank">HackerRank</a></div>
+    <div class="card"><a href="https://codeforces.com" target="_blank">Codeforces</a></div>
+    <div class="card"><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a></div>
+  </div>
+</body>
+</html>

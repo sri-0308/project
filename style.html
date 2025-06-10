@@ -1,0 +1,99 @@
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+
+        .quote {
+            font-style: italic;
+            margin-top: 1.5rem;
+            color: #f8f8fa;
+            font-size: 1.1rem;
+            min-height: 60px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #e8eef0;
+            width: 0;
+            animation: typing 4s steps(80, end) forwards, blink 0.8s step-end infinite;
+        }
+
+        .author {
+            font-size: 0.9rem;
+            font-style: normal;
+            opacity: 0;
+            animation: fadeIn 2s ease 4.2s forwards;
+            margin-top: 0.5rem;
+            color: #FFD700;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 1rem;
+            color: #E0FFFF;
+            animation: fadeIn 2s ease 1s forwards;
+            opacity: 0;
+        }
+
+        footer strong {
+            color: #FFD700;
+        }
+   
