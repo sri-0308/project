@@ -41,6 +41,26 @@
         .pdf-list li {
             margin: 5px 0;
         }
+        .scroll-down {
+    text-align: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    margin-top: 10px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(8px);
+    }
+    60% {
+        transform: translateY(4px);
+    }
+}
+
     </style>
 </head>
 <body>
@@ -48,6 +68,7 @@
         <h1>💻 Computer Science Materials</h1>
         <p>Download PDFs for your semester subjects below</p>
     </header>
+    <div class="scroll-down">↓</div>
 
     <div class="container">
         <div class="sem-card">
@@ -122,11 +143,17 @@
                 <li><a href="semester_4-1/Blockchain Technologies/block.html" download>Blockchain Technologies</a></li>
                 <li><a href="semester_4-1/Cloud Computing/cc.html" download>Cloud Computing</a></li>
                 <li><a href="semester_4-1/Deep Learning Techniques/dl.html" download>Deep Learning Techniques</a></li>
-                <li><a href="semester_4-1/IoT and Applications/iot.html" download>IoT and Applications</a></li>
+                <li><a href="semester_4-1/IoTand Applications/iot.html" download>IoT and Applications</a></li>
                 <li><a href="semester_4-1/Principles of Communications/poc.html" download>Principles of Communications</a></li>
                 <li><a href="semester_4-1/Universal Human Values 2 Understanding/universal_human_values_2_understanding.html" download>Universal Human Values 2 Understanding</a></li>
             </ol>
         </div>
     </div>
+    <script>
+    document.querySelector('.scroll-down').addEventListener('click', () => {
+        document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
 </body>
 </html>
