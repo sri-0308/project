@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Syllabus | TEC Resources Hub</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    /* Rich lavender background */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #d8bfff, #cfa6ff); /* deeper lavender */
+        min-height: 100vh;
+        padding: 30px;
+    }
+
+    .regulation {
+        margin: 20px auto;
+        padding: 25px;
+        border: 2px solid #a97bdc;
+        border-radius: 15px;
+        background-color: #ffffff;
+        max-width: 900px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .regulation h2 {
+        margin-bottom: 20px;
+        color: #3f1d6b; /* bold lavender text */
+        text-align: center;
+    }
+
+    .branch-links,
+    .semester-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .branch-links a,
+    .semester-links a {
+        padding: 12px 22px;
+        background-color: #9b59b6; /* bold purple */
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s ease;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .branch-links a:hover,
+    .semester-links a:hover {
+        background-color: #7e3fad; /* darker hover */
+        transform: scale(1.07);
+    }
+
+    .semester-section {
+        margin-top: 10px;
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding: 15px;
+        }
+
+        .regulation {
+            padding: 15px;
+        }
+
+        .branch-links a,
+        .semester-links a {
+            font-size: 0.9rem;
+            padding: 10px 16px;
+        }
+    }
+    footer {
+        margin-top: 50px;
+        padding: 20px;
+        text-align: center;
+        background-color: #6a4c93; /* deep lavender */
+        color: #ffffff;
+        font-size: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer b {
+        display: block;
+        margin-top: 5px;
+        color: #ffe0f7; /* soft highlight */
+    }
+    header {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    background-color: #f3e8ff; /* light lavender pastel */
+    border-radius: 60px / 30px; /* oval shape */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid #a97bdc;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    color: #4c2a85; /* bold purple */
+}
+
+header p {
+    color: #333;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+</style>
+
+<body>
+    <header>
+        <h1>Syllabus - JNTUK Regulations</h1>
+        <p>Select your regulation and branch to view/download semester-wise syllabus</p>
+        <p><b>The years pdf includes both sems</b></p>
+    </header>
+
+    <div class="container">
+
+        
+        <div class="regulation">
+            <h2>📘 R23 Regulation</h2>
+            <div class="branch-links">
+                <a href="#" onclick="toggleSemesters('r23-cse')">CSE</a>
+                <a href="#" onclick="toggleSemesters('r23-aiml')">AIML</a>
+                <a href="#" onclick="toggleSemesters('r23-ece')">ECE</a>
+                <a href="#" onclick="toggleSemesters('r23-it')">IT</a>
+            </div>
+            <div id="r23-cse" class="semester-section">
+                <h3>CSE Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/jntuk-b-tech-r23-course-structure-and-i-year-syllabus/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/r23-ii-year-syllabus-cse/" download>2nd Year</a>
+                    <a href="#" download>3rd Year</a>
+                    <a href="#" download>4th Year</a>
+                </div>
+            </div>
+            <div id="r23-aiml" class="semester-section">
+                <h3>AIML Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/jntuk-b-tech-r23-course-structure-and-i-year-syllabus/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/r23-ii-year-syllabus-cse-ai-ml/" download>2nd Year</a>
+                    <a href="#" download>3rd Year</a>
+                    <a href="#" download>4th Year</a>
+                </div>
+            </div>
+            <div id="r23-ece" class="semester-section">
+                <h3>ECE Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/jntuk-b-tech-r23-course-structure-and-i-year-syllabus/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/r23-ii-year-syllabus-ece/" download>2nd Year</a>
+                    <a href="#" download>3rd Year</a>
+                    <a href="#" download>4th Year</a>
+                </div>
+            </div>
+            <div id="r23-it" class="semester-section">
+                <h3>IT Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/jntuk-b-tech-r23-course-structure-and-i-year-syllabus/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/r23-ii-year-syllabus-it/" download>2nd Year</a>
+                    <a href="#" download>3rd Year</a>
+                    <a href="#" download>4th Year</a>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="regulation">
+            <h2>📗 R20 Regulation</h2>
+            <div class="branch-links">
+                <a href="#" onclick="toggleSemesters('r20-cse')">CSE</a>
+                <a href="#" onclick="toggleSemesters('r20-aiml')">AIML</a>
+                <a href="#" onclick="toggleSemesters('r20-ece')">ECE</a>
+                <a href="#" onclick="toggleSemesters('r20-it')">IT</a>
+            </div>
+            <div id="r20-cse" class="semester-section">
+                <h3>CSE Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/main-cse_ug_r20_1-1-sem-cs-syllabus/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/main-cse_ug_r20_2-1-sem-cs-syllabus/" download>2nd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/cse-3-1-cs-syllabus_ug_r20/" download>3rd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/cse-4-1-cs-syllabus_ug_r20/" download>4th Year</a>
+                </div>
+            </div>
+            <div id="r20-aiml" class="semester-section">
+                <h3>AIML Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/cse-ai-ml-r20_iv-years_course-structure/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/cse-aiml_iv-years_cs-syllabus_ug_r20/" download>2nd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/cse-aiml_iv-years_cs-syllabus_ug_r20/" download>3rd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/cse-aiml_iv-years_cs-syllabus_ug_r20/" download>4th Year</a>
+                </div>
+            </div>
+            <div id="r20-ece" class="semester-section">
+                <h3>ECE Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/ece_1-1-sem_cs-syllabus_ug_r20/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/ece_2-1-sem_cs-syllabus_ug_r20/" download>2nd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/ece-3-1-cs-syllabus_ug_r20/" download>3rd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/ece-4-1-cs-syllabus_ug_r20/" download>4th Year</a>
+                </div>
+            </div>
+            <div id="r20-it" class="semester-section">
+                <h3>IT Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/it_ug_r20_1-1-sem-cs-syllabus/" download>1st Year</a>
+                    <a href="https://files.jntufastupdates.com/download/it_ug_r20_2-1-sem-cs-syllabus/" download>2nd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/it-3-1-cs-syllabus_ug_r20/" download>3rd Year</a>
+                    <a href="https://files.jntufastupdates.com/download/it-4-1-cs-syllabus_ug_r20/" download>4th Year</a>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="regulation">
+            <h2>📙 R19 Regulation</h2>
+            <div class="branch-links">
+                <a href="#" onclick="toggleSemesters('r19-cse')">CSE</a>
+             
+                <a href="#" onclick="toggleSemesters('r19-ece')">ECE</a>
+                <a href="#" onclick="toggleSemesters('r19-it')">IT</a>
+            </div>
+            <div id="r19-cse" class="semester-section">
+                <h3>CSE Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/jntuk-r19-cse-syllabus/" download>1-4 Years</a>
+                    
+                </div>
+            </div>
+            <div id="r19-ece" class="semester-section">
+                <h3>ECE Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/jntuk-r19-ece-syllabus/" download>1-4 Years</a>
+                </div>
+            </div>
+            <div id="r19-it" class="semester-section">
+                <h3>IT Semesters</h3>
+                <div class="semester-links">
+                    <a href="https://files.jntufastupdates.com/download/jntuk-r19-it-syllabus/" download>1-4 Years</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        All syllabus links are sourced from the official JNTUK website.<br>
+    </footer>
+
+    <script>
+        function toggleSemesters(id) {
+            const allSections = document.querySelectorAll('.semester-section');
+            allSections.forEach(section => section.style.display = 'none');
+            const selected = document.getElementById(id);
+            if (selected) selected.style.display = 'block';
+        }
+      
+    let currentlyOpen = null;
+
+    function toggleSemesters(id) {
+        const selected = document.getElementById(id);
+
+        // If same section is already open, hide it
+        if (currentlyOpen === id) {
+            selected.style.display = 'none';
+            currentlyOpen = null;
+        } else {
+            // Hide all other sections
+            document.querySelectorAll('.semester-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected one
+            selected.style.display = 'block';
+            currentlyOpen = id;
+        }
+    }
+
+
+    </script>
+</body>
+</html>

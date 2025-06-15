@@ -19,4 +19,9 @@
       });
     });
   });
+    setTimeout(() => {
+        document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+    }, 5000);
+
+
 
