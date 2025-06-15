@@ -271,17 +271,17 @@ header p {
     function toggleSemesters(id) {
         const selected = document.getElementById(id);
 
-        // If same section is already open, hide it
+        
         if (currentlyOpen === id) {
             selected.style.display = 'none';
             currentlyOpen = null;
         } else {
-            // Hide all other sections
+            
             document.querySelectorAll('.semester-section').forEach(section => {
                 section.style.display = 'none';
             });
 
-            // Show the selected one
+         
             selected.style.display = 'block';
             currentlyOpen = id;
         }
